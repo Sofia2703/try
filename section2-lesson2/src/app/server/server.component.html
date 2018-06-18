@@ -1,0 +1,8 @@
+<!--string Interporation-->
+<!--<p>{{'server'}} with ID {{ serverId }} is {{ getServerStatus() }}</p>-->
+
+<!--ngStyle
+<p [ngStyle] ="{backgroundColor: getColor()}">{{'server'}} with ID {{ serverId }} is {{ getServerStatus() }}</p>-->
+
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: getServerStatus() === 'online'}"> {{ 'server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
