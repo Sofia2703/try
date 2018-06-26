@@ -10,7 +10,8 @@ export class RecipeService {
     //recipeSelected = new EventEmitter<Recipe>();
 
     private recipes: Recipe[] = [
-        new Recipe('A Test Recipe', 
+        new Recipe(
+        'A Test Recipe', 
         'This is simply a test', 
         'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
         [
@@ -18,7 +19,8 @@ export class RecipeService {
             new Ingredient('French Fries', 20)
         ]),
         
-        new Recipe('Travel', 
+        new Recipe(
+        'Travel', 
         'get now', 
         'http://www.theamazingpics.com/includes/img/pics/captivating-pic-of-rotterdam-in-a-bubble.jpg',
       [
@@ -29,6 +31,11 @@ export class RecipeService {
     ];
 
     constructor(private slService: ShoppingListService) {}
+
+    setRecipes(recipes: Recipe[]) {
+        this.recipes = recipes;
+        this.recipesChanged.next(this.recipes.slice());
+    }
 
     getRecipes() {
         return this.recipes.slice();
