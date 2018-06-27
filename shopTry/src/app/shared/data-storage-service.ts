@@ -9,7 +9,9 @@ import { AuthService } from '../auth/auth.service';
 export class DataStorageService {
     constructor(private http: Http, 
                 private recipeService: RecipeService,
-                private authService: AuthService) {}
+                private authService: AuthService) {
+                    
+                }
 
     storeRecipes() {
         const token = this.authService.getToken();
