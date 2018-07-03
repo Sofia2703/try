@@ -1,0 +1,28 @@
+.avater {
+  background-color: black;
+  color: white;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50% !important;
+  text-align: center;
+  padding-top: 25px;
+  top: -20px;
+  &.red {
+    background-color: red;
+  }
+  &.yellow {
+    background-color: yellow;
+    color: black;
+  }
+  &.green {
+    background-color: green;
+  }
+}
+
+
+
+
+.dashboard-stat {
+  overflow: visible;
+}
